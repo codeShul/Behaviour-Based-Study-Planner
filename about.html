@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Behavior-Based Personalized Learning Model</title>
+  <style>
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+    }
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --accent:#045a8d;
+      --muted:#6b7280;
+      --radius:12px;
+      --max-w:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+ nav {
+      background-color: #1f3e74;   
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    nav h1 {
+      font-size: 29px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 25px;
+      background-color: #3498db;   /* blue button */
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1abc9c;   /* teal on hover */
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#0f1724;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+
+		
+    .container{
+      width:100%;
+      max-width:var(--max-w);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(10, 20, 40, 0.06);
+      padding:10px;
+      box-sizing:border-box;
+    }
+    #over{
+        text-align: center;
+        font-size: 50px;
+    }
+    header{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#0b77b6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:rgb(19, 57, 228);
+      font-weight:700;
+      font-size:20px;
+      flex:0 0 56px;
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+    }
+    .subtitle{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    section{ margin-top:17px; }
+    h2{
+      margin:0 0 10px 0;
+      font-size:16px;
+      color:var(--accent);
+    }
+   
+    p.lead{
+      margin:0 0 12px 0;
+      color:#1048be;
+    }
+    p{ margin:0 0 12px 0; color:#111827; }
+
+    ul, ol{
+      margin:0 0 12px 20px;
+      padding:0;
+    }
+    .card{
+      background:#fbfdff;
+      border-radius:10px;
+      padding:14px;
+      border:1px solid rgba(4,90,141,0.06);
+    }
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media(min-width:820px){
+      .two-col{ grid-template-columns: 1fr 1fr; }
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      background:rgba(4,90,141,0.08);
+      color:var(--accent);
+      border-radius:999px;
+      font-size:12px;
+      font-weight:600;
+    }
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+  
+           
+    /* small helpers */
+    .muted{ color:var(--muted); font-size:13px; }
+    .example{ font-style:normal; margin-top:8px; }
+  </style>
+</head>
+<body>
+    
+  <main class="container" role="main" aria-labelledby="pageTitle">
+    <header>
+    </header>
+   <nav>
+    <h1>Behavioral Learning Platform</h1>
+    <a href="homepage.html">BACK</a>
+  </nav>
+
+
+    <section id="title">
+      <h2 id="over">Overview</h2>
+      <p class="lead">
+        A <strong>Behavior-Based Personalized Learning Model</strong> places the student at the center of learning by analyzing how they behave, respond, and emotionally engage. Instead of relying solely on grades and test scores, it combines educational psychology, behavioral science, and artificial intelligence to create a holistic learner profile.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core behavioral indicators</h2>
+      <p>Key traits the model identifies and monitors:</p>
+      <ul>
+        <li><strong>Attention patterns</strong> — sustained focus vs. distractibility</li>
+        <li><strong>Curiosity level</strong> — propensity to explore or ask questions</li>
+        <li><strong>Motivation style</strong> — intrinsic vs. extrinsic motivators</li>
+        <li><strong>Consistency in practice</strong> — regularity and effort over time</li>
+        <li><strong>Emotional stability</strong> — stress, anxiety, or resilience while learning</li>
+        <li><strong>Preferred learning modes</strong> — visual, verbal, practical, conceptual, analytical</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Data collection methods</h2>
+      <p>The model gathers behavioral data using multiple inputs:</p>
+      <ul>
+        <li>Structured forms and surveys</li>
+        <li>Psychological questionnaires</li>
+        <li>Teacher and peer observational reports</li>
+        <li>Digital activity tracking (time-on-task, clicks, resource usage, engagement metrics)</li>
+      </ul>
+      <p class="muted">All data is combined to build a detailed <em>learner persona</em> that reflects strengths, weaknesses, cognitive style, and motivational triggers.</p>
+    </section>
+
+    <section>
+      <h2>AI-driven personalization (what the system generates)</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3 class="muted">Outputs</h3>
+          <ul>
+            <li>Subject-wise goals tailored to the learner</li>
+            <li>Preferred learning-method recommendations (visual, verbal, practical, conceptual, analytical)</li>
+            <li>Customized practice routines and pacing</li>
+            <li>Activity formats matched to student traits</li>
+            <li>Motivation-based engagement techniques (rewards, challenges, autonomy)</li>
+            <li>Behavior-focused improvement strategies</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="muted">Examples</h3>
+          <ul>
+            <li><strong>Visual–creative learners:</strong> diagram-based tasks, story-driven projects, infographics</li>
+            <li><strong>Analytical learners:</strong> structured notes, flowcharts, logic and problem sets</li>
+            <li><strong>Slow-but-consistent learners:</strong> pacing strategies, spaced repetition, short daily practice</li>
+            <li><strong>Highly curious learners:</strong> exploratory tasks, independent research mini-projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Adaptive learning cycle</h2>
+      <p>The model runs as a continuous loop:</p>
+      <ol>
+        <li>Collect new behavior & performance data from classroom activities and assessments.</li>
+        <li>Analyze patterns and emotional responses.</li>
+        <li>Update the learner profile.</li>
+        <li>Refine and reissue personalized learning paths.</li>
+      </ol>
+      <p class="muted">Over time the AI becomes more accurate and the recommendations grow increasingly personalized and effective.</p>
+    </section>
+
+    <section>
+      <h2>Impact on student-centered education</h2>
+      <p>This approach shifts educational focus from:</p>
+      <ul>
+        <li><strong>Marks → Mindset</strong></li>
+        <li><strong>Memory → Motivation</strong></li>
+        <li><strong>One-size-fits-all → Adaptive learning</strong></li>
+        <li><strong>Teacher-led → Student-centered</strong></li>
+      </ul>
+      <p>Students receive the right content, at the right pace, in the right way — resulting in deeper understanding, sustained motivation, and holistic development.</p>
+    </section>
+
+    <section>
+      <h2>Final outcome</h2>
+      <p>
+        The Behavior-Based Personalized Learning Model ensures each learner is taught according to their psychological strengths and needs. It promotes engagement, deeper learning, and meaningful growth rather than focusing solely on scores.
+      </p>
+    </section>
+<!-- 
+    <footer>
+      <span class="badge">Model Summary</span>
+      <div style="margin-top:8px" class="muted">Want this exported as a <strong>PPT</strong> or <strong>PDF</strong>, or need a simplified one-page handout? Tell me which format and I'll prepare it.</div>
+    </footer> -->
+  </main>
+</body>
+</html>

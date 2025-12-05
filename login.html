@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loginpage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #1e3c72;
+            font-family: calibri;
+            padding: 15px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        li a {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            margin-right: 32px;
+            text-decoration: none;
+        }
+
+        .btn {
+            background: white;
+            color: #1e3c72;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        /* LOGIN BOX */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* navbar height */
+        }
+
+        .box {
+            width: 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #bbb;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background:#1e3c72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background: #0087e8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#">Behavioral Learning Platform</a>
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+
+                
+                <a href="login.html" class="btn">Login</a>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <div class="container">
+        <div class="box">
+            <h2>Login</h2>
+
+            <input type="text" id="user" placeholder="Username" required>
+            <input type="password" id="pass" placeholder="Password" required>
+
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let user = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
+
+            if (user.trim() === "" || pass.trim() === "") {
+                alert("Please fill all fields");
+                return;
+            }
+
+            
+            localStorage.setItem("loggedIn", "true");
+
+            
+            window.location.href = "homepage.html";  
+        }
+    </script>
+
+</body>
+</html>

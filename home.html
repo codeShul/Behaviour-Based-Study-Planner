@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Behavior-Based Personalized Learning Model for Student-Centered Education</title>
+    <link rel="stylesheet" href="asep.css">
+    <script src="asep.js" defer></script>
+   
+</head>
+<body>
+<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">Behavioral Learning Platform</a> </div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="login.html">Login/Register</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section" id="heroSection">
+            <div class="hero-content">
+                <h1>A Behavior-Based Personalized Learning Model for Student-Centered Education</h1>
+                <p>Comprehensive behavioral assessments with personalized study plans for students across all age groups</p>
+            <div class="hero-buttons">
+                    <button class="btn-get-started" onclick="scrollToPortal()">Get Started →</button>
+                         <button class="btn-learn-more" onclick="scrollToFeatures()">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section" id="featuresSection">
+            <h2>Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                
+                    <div class="feature-text">
+                        <h3>Comprehensive Behavioral Assessments</h3>
+                        <p>For ages 6-22 with age-appropriate question formats</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                
+                    <div class="feature-text">
+                        <h3>Personalized Study Plans</h3>
+                        <p>Based on trait analysis with specific recommendations</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                
+                    <div class="feature-text">
+                        <h3>Visual Progress Tracking</h3>
+                        <p>Color-coded feedback and percentage scores</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                
+                    <div class="feature-text">
+                        <h3>User Portal System</h3>
+                        <p>Dashboards for students</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                
+                    <div class="feature-text">
+                        <h3>Real-time Results</h3>
+                        <p>Instant feedback with detailed trait breakdowns</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- Portal Selection -->
+        <div class="portal-selection active" id="portalSelection">
+            <div class="portal-section">
+                <h2 style="text-align: center; margin-bottom: 40px; color: #1e3c72;">Select Your Portal</h2>
+                <div class="button-group">
+                    <div class="portal-card" onclick="selectPortal('student')">
+                        <span class="portal-icon">🎓</span>
+                        <div class="portal-title">User Portal</div>
+                        <div class="portal-desc">Take assessments and view your personalized behavioral reports</div>
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Portal - Age Selection -->
+        <div class="age-selection" id="ageSelection">
+            <button class="btn back-btn" onclick="goBack('portal')">← Back</button>
+            <h2 style="text-align: center; margin-bottom: 40px; color: #1e3c72;">Select Your Age Group</h2>
+            <div class="button-group">
+                <div class="age-card" onclick="startTest('6-10')">
+                    <span class="age-icon">🧒</span>
+                    <div class="age-title">Ages 6-10</div>
+                    <div class="age-subtitle">Middle Childhood</div>
+                </div>
+                <div class="age-card" onclick="startTest('11-13')">
+                    <span class="age-icon">👦</span>
+                    <div class="age-title">Ages 11-13</div>
+                    <div class="age-subtitle">Early Adolescence</div>
+                </div>
+                <div class="age-card" onclick="startTest('14-18')">
+                    <span class="age-icon">👨</span>
+                    <div class="age-title">Ages 14-18</div>
+                    <div class="age-subtitle">Adolescence</div>
+                </div>
+                <div class="age-card" onclick="startTest('18-22')">
+                    <span class="age-icon">🎯</span>
+                    <div class="age-title">Ages 18-22</div>
+                    <div class="age-subtitle">Young Adults</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Container -->
+        <div class="test-container" id="testContainer">
+            <button class="btn back-btn" onclick="goBack('age')">← Back</button>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <p style="text-align: center; margin: 10px 0;" id="progressText">Question 1 of 20</p>
+            
+            <div id="questionsContainer"></div>
+            
+            <div class="button-group">
+                <button class="btn" id="submitBtn" onclick="submitTest()" style="display: none;">Submit Test</button>
+            </div>
+        </div>
+
+        <!-- Results Dashboard -->
+        <div class="dashboard" id="dashboard">
+            <button class="btn back-btn" onclick="goBack('portal')">← Back to Home</button>
+            <h2 style="text-align: center; margin-bottom: 30px;">Your Behavioral Assessment Results</h2>
+            
+            <div class="summary-stats" id="summaryStats"></div>
+            
+            <div id="resultsContainer"></div>
+        </div>
+
+        <!-- Teacher Portal -->
+        <div class="dashboard" id="teacherDashboard">
+            <button class="btn back-btn" onclick="goBack('portal')">← Back</button>
+            <h2 style="text-align: center; margin-bottom: 30px;">Teacher Dashboard</h2>
+            
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalStudents">0</div>
+                    <div class="stat-label">Total Students</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="avgScore">0%</div>
+                    <div class="stat-label">Average Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="completedTests">0</div>
+                    <div class="stat-label">Completed Tests</div>
+                </div>
+            </div>
+
+            <h3 style="margin: 30px 0 20px 0;">Student Assessments</h3>
+            <div id="studentList"></div>
+        </div>
+    </div>
+</body>
+</html>
