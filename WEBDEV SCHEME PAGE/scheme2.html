@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soil Health Card Scheme</title>
+
+<link href="scheme2.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <style>
+        
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #1b5e20;
+    --accent-color: #0d47a1;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f2f1, #f1f8e9);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+h2 {
+    color: var(--secondary-color);
+    margin-top: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color var(--transition-speed);
+}
+p:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    transition: color var(--transition-speed);
+}
+ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+ul li:hover {
+    color: var(--accent-color);
+}
+
+.label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+.footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 20px;
+    }
+}
+    </style>
+
+<div class="container">
+    <h1>Soil Health Card Scheme</h1>
+
+    <p><span class="label">Launched:</span> 2015 by the Government of India</p>
+
+    <p><span class="label">Objective:</span> To assess the nutrient status of soil and provide farmers with recommendations to improve soil health and crop productivity.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Soil samples are collected and tested every 2–3 years</li>
+        <li>Soil Health Card provides information on macro-nutrients (Nitrogen, Phosphorus, Potassium), secondary nutrients, and micro-nutrients</li>
+        <li>Recommends appropriate fertilizer dosage and soil amendments</li>
+        <li>Helps in balanced use of fertilizers</li>
+        <li>Cards are issued free of cost to farmers</li>
+    </ul>
+
+    <h2>Benefits</h2>
+    <ul>
+        <li>Improves soil fertility and crop yield</li>
+        <li>Reduces input cost by avoiding excess fertilizer use</li>
+        <li>Promotes sustainable farming practices</li>
+        <li>Increases farmer awareness about soil management</li>
+    </ul>
+
+    <h2>Eligibility</h2>
+    <p>All farmers across India</p>
+
+    <div class="footer">
+        <p><span class="label">Official Portal:</span> <a href="https://soilhealth.dac.gov.in" target="_blank">soilhealth.dac.gov.in</a></p>
+    </div>
+</div>
+
+</body>
+</html>
