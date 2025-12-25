@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Mechanization Scheme</title>
+    <link rel="stylesheet" href="scheme6.css">
+
+</head>
+<body>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+:root {
+    --primary-color: #2e7d32;     
+    --secondary-color: #81c784;    
+    --accent-color: #f57c00;      
+    --bg-color: #f4f7f6;           
+    --text-color: #333;
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform var(--transition-speed);
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+h2::before {
+    content: '⚙️';
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.label {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+}
+
+ul li::before {
+    content: '🚜';
+    position: absolute;
+    left: 0;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+    <div class="container">
+        <h1>Farm Mechanization Scheme</h1>
+        <h3>(Sub-Mission on Agricultural Mechanization – SMAM)</h3>
+
+        <p><span class="label">Launched:</span> 2014 by the Government of India</p>
+
+        <p><span class="label">Objective:</span> To promote use of modern agricultural machinery and reduce dependency on manual labor, especially for small and marginal farmers.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li>Provides subsidy and financial assistance for purchase of agricultural machinery and equipment</li>
+            <li>Supports custom hiring centers (CHCs) so small farmers can rent machines</li>
+            <li>Promotes machinery like tractors, power tillers, seed drills, harvesters, and sprayers</li>
+            <li>Encourages adoption of energy-efficient and advanced farm equipment</li>
+            <li>Focus on small, marginal, women, and SC/ST farmers</li>
+        </ul>
+
+        <h2>Benefits</h2>
+        <ul>
+            <li>Reduces labor cost and time</li>
+            <li>Increases farm efficiency and productivity</li>
+            <li>Ensures timely agricultural operations</li>
+            <li>Improves farmers’ income</li>
+        </ul>
+
+        <h2>Eligibility</h2>
+        <p>All farmers, with priority to small and marginal farmers</p>
+
+        <h2>Implementing Authority</h2>
+        <p>Central and State Governments</p>
+    </div>
+
+</body>
+</html>

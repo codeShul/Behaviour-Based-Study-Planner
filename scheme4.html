@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seed Distribution Scheme</title>
+
+<link href="scheme4.css" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #1b5e20;
+    --accent-color: #0d47a1;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+h2 {
+    color: var(--secondary-color);
+    margin-top: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color var(--transition-speed);
+}
+p:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    transition: color var(--transition-speed);
+}
+ul li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+ul li:hover {
+    color: var(--accent-color);
+}
+
+.label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+.footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 20px;
+    }
+}
+    </style>
+
+<div class="container">
+    <h1>Seed Distribution Scheme</h1>
+
+    <p><span class="label">Scheme:</span> Seed Distribution Scheme (under National Food Security Mission / State Agriculture Schemes)</p>
+    <p><span class="label">Objective:</span> To provide quality certified seeds to farmers at subsidized rates in order to increase crop productivity and ensure food security.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Distribution of high-yielding variety (HYV) and certified seeds</li>
+        <li>Covers crops such as paddy, wheat, pulses, oilseeds, and millets</li>
+        <li>Seeds are provided at subsidized prices</li>
+        <li>Encourages use of improved and disease-resistant seed varieties</li>
+        <li>Implemented through State Agriculture Departments, Krushi Seva Kendras, and cooperatives</li>
+    </ul>
+
+    <h2>Benefits</h2>
+    <ul>
+        <li>Improves crop yield and quality</li>
+        <li>Reduces risk of crop failure</li>
+        <li>Lowers input cost for farmers</li>
+        <li>Promotes adoption of modern agricultural practices</li>
+    </ul>
+
+    <h2>Eligibility</h2>
+    <p>All farmers, including small and marginal farmers</p>
+
+    <h2>Implementing Authority</h2>
+    <p>Central and State Governments</p>
+</div>
+
+</body>
+</html>
